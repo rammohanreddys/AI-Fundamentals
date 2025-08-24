@@ -1,11 +1,18 @@
 # AI-Fundamentals
 
 **Context:**
+
 * Python Basics
    * Python Fundaments
    * Python Frameworks for ML Models
+     
 * AI Basics
-   * AI Fundamentals     
+   * AI Concepts
+   * Machine Learning Concepts
+   * Generative AI Concepts
+   * Natural Language Processing Concepts
+   * Computer Vision Concepts
+   * AI-powered information extraction Concepts     
 
 ## Python Fundaments:
 

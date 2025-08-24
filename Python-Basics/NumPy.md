@@ -209,7 +209,7 @@ Output:
 
 <img width="543" height="73" alt="image" src="https://github.com/user-attachments/assets/6e532230-1a22-42d3-8a03-3dcfdc438f4f" />
 
-
+In this array the innermost dimension (5th dim) has 4 elements, the 4th dim has 1 element that is the vector, the 3rd dim has 1 element that is the matrix with the vector, the 2nd dim has 1 element that is 3D array and 1st dim has 1 element that is a 4D array.
 
 
 

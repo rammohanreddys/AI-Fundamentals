@@ -97,4 +97,103 @@ print(arry2)
 
 <img width="525" height="115" alt="image" src="https://github.com/user-attachments/assets/e40bcf1e-eb8a-4e31-ba09-622a7cd591ab" />
 
+### **Dimensions in Arrays**:
+
+A dimension in arrays is one level of array depth (nested arrays)
+
+### **0-D Arrays**:
+
+0-D arrays, or Scalars, are the elements in an array. Each value in an array is a 0-D array.
+
+Example:
+```
+import numpy as np
+arry = np.array([56])  # O-D array
+print(arry)
+```
+
+Output:
+
+<img width="434" height="40" alt="image" src="https://github.com/user-attachments/assets/d194ac72-d9f0-46a1-affd-70e2f917cf9c" />
+
+### 1-D Arrays:
+
+* An array that has 0-D arrays as its elements is called uni-dimensional or 1-D array.
+* These are the most common and basic arrays.
+
+Create a 1-D array containing the values 10,20,30,40,50:
+```
+import numpy as np
+
+arry = np.array([10,20,30,40,50])
+
+print(arry)
+```
+
+Output:
+
+<img width="462" height="49" alt="image" src="https://github.com/user-attachments/assets/10ea0c3c-1018-4278-86e8-47fd6ee4be6e" />
+
+### 2-D Arrays:
+
+* An array that has 1-D arrays as its elements is called a 2-D array.
+* These are often used to represent matrix or 2nd order tensors.
+
+Create a 2-D array containing two arrays with the values 10,20,30 and 40,50,60:
+```
+import numpy as np
+
+arry = np.array([[10,20,30], [40,50,60]])
+
+print(arry)
+```
+
+Output:
+
+<img width="465" height="55" alt="image" src="https://github.com/user-attachments/assets/1c3e2164-60e0-4bc2-9461-a658761458d5" />
+
+### 3-D arrays:
+   
+* An array that has 2-D arrays (matrices) as its elements is called 3-D array.
+* These are often used to represent a 3rd order tensor.
+
+Create a 3-D array with two 2-D arrays, both containing two arrays with the values 1,2,3 and 4,5,6:
+```
+import numpy as np
+
+arry = np.array([[[10,20,30], [40,50,60]],[[10,20,30],[40,50,60]]])
+
+print(arry)
+```
+Output:
+
+<img width="519" height="127" alt="image" src="https://github.com/user-attachments/assets/6253271e-8092-4e09-a623-6f1c030f6308" />
+
+**Check Number of Dimensions?**
+
+Example:
+```
+import numpy as np
+
+a = np.array([5])
+b = np.array([1,2,3])
+c = np.array([[1,2],[3,4]])
+d = np.array([[[1,2],[3,4]],[[1,2],[3,4]]])
+
+print(a.ndim)
+print(b.ndim)
+print(c.ndim)
+print(d.ndim)
+```
+
+Output:
+
+<img width="454" height="92" alt="image" src="https://github.com/user-attachments/assets/4d06aad6-44ad-4714-ab59-ddc5a4f45a16" />
+
+
+
+
+
+
+
 

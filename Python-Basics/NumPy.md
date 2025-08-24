@@ -68,3 +68,33 @@ print(np.__version__)
 Output:
 
 <img width="337" height="47" alt="image" src="https://github.com/user-attachments/assets/4f06bf6c-927e-4791-a3ab-3eee13d4ea98" />
+
+## Creating Arrays Using NumPy:
+
+* NumPy is used to work with arrays. The array object in NumPy is called **ndarray**. 
+* We can create a NumPy ndarray object by using the array() function.
+
+**Note:**
+
+To create an ndarray, we can pass a list, tuple or any array-like object into the array() method, and it will be converted into an ndarray:
+
+```
+import numpy as np
+print(np.__version__)
+
+print("#####################")
+
+arry = np.array((1,2,3,4,5)) ## passing tuple of elements to array function
+print(arry)
+
+print("#####################")
+
+arry2 = np.array([1,2,3,4]) ## passing list of elements to array function
+print(arry2)
+```
+
+**Output:**
+
+<img width="525" height="115" alt="image" src="https://github.com/user-attachments/assets/e40bcf1e-eb8a-4e31-ba09-622a7cd591ab" />
+
+

@@ -190,6 +190,78 @@ Output:
 
 <img width="454" height="92" alt="image" src="https://github.com/user-attachments/assets/4d06aad6-44ad-4714-ab59-ddc5a4f45a16" />
 
+### Higher Dimensional Arrays:
+
+* An array can have any number of dimensions.
+* When the array is created, you can define the number of dimensions by using the **ndmin** argument.
+
+Create an array with 5 dimensions and verify that it has 5 dimensions:
+```
+import numpy as np
+
+arry = np.array([1,2,3,4,5], ndmin=5)
+
+print(arry)
+print("number of dimensions of the array", arry.ndim)
+```
+
+Output:
+
+<img width="543" height="73" alt="image" src="https://github.com/user-attachments/assets/6e532230-1a22-42d3-8a03-3dcfdc438f4f" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

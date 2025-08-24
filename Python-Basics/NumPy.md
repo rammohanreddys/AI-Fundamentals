@@ -52,6 +52,19 @@ import numpy as np
 import numpy as np
 
 arry = np.array([1,2,3,4]) ## one dimensional array
+
 print(arry)
 print(type(arry))
 ```
+
+**Checking NumPy Version**
+
+The version string is stored under __version__ attribute.
+```
+import numpy as np
+
+print(np.__version__)
+```
+Output:
+
+<img width="337" height="47" alt="image" src="https://github.com/user-attachments/assets/4f06bf6c-927e-4791-a3ab-3eee13d4ea98" />

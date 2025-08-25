@@ -1,5 +1,14 @@
 # NumPy Basics
 
+Context:
+
+* What is NumPy?
+* Why Use NumPy?
+* Creating Arrays Using NumPy
+* NumPy Array Indexing
+* NumPy Array Slicing
+* NumPy Data Types
+
 ## **What is NumPy?**
 
 **NumPy (Numerical Python) is a powerful library for:**
@@ -211,9 +220,9 @@ Output:
 
 In this array the innermost dimension (5th dim) has 4 elements, the 4th dim has 1 element that is the vector, the 3rd dim has 1 element that is the matrix with the vector, the 2nd dim has 1 element that is 3D array and 1st dim has 1 element that is a 4D array.
 
-### NumPy Array Indexing:
+## NumPy Array Indexing:
 
-#### Access Array Elements:
+### Access Array Elements:
 * Array indexing is the same as accessing an array element.
 * You can access an array element by referring to its index number.
 * The indexes in NumPy arrays start with 0, meaning that the first element has index 0, and the second has index 1 etc.
@@ -236,7 +245,7 @@ Output:
 
 <img width="519" height="117" alt="image" src="https://github.com/user-attachments/assets/7774a897-c818-42ea-a8ed-335e4474b215" />
 
-#### Access 2-D Arrays:
+### Access 2-D Arrays:
 
 * To access elements from 2-D arrays we can use comma separated integers representing the dimension and the index of the element.
 * Think of 2-D arrays like a table with rows and columns, where the dimension represents the row and the index represents the column.
@@ -258,7 +267,7 @@ Output:
 
 <img width="508" height="65" alt="image" src="https://github.com/user-attachments/assets/fb1d69e7-2858-47c4-a574-f5028851fb6f" />
 
-#### Access 3-D Arrays:
+### Access 3-D Arrays:
 
 To access elements from 3-D arrays we can use comma separated integers representing the dimensions and the index of the element.
 
@@ -298,9 +307,9 @@ Output:
 
 <img width="418" height="42" alt="image" src="https://github.com/user-attachments/assets/58ffb38a-ed40-445a-9e56-095095d4f0e4" />
 
-### NumPy Array Slicing:
+## NumPy Array Slicing:
 
-#### Slicing arrays:
+### Slicing arrays:
 
 * Slicing in python means taking elements from one given index to another given index.
 * We pass slice instead of index like this: [start:end].

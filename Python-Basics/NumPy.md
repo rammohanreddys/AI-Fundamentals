@@ -360,8 +360,27 @@ Output:
 
 <img width="459" height="58" alt="image" src="https://github.com/user-attachments/assets/090a8417-9b57-45bc-97dc-1c74cef27002" />
 
+#### Slicing 2-D Arrays:
 
+Example:
+```
+import numpy as np
 
+arr = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
+
+print("From the second element, slice elements from index 1 to index 4 (not included):")
+print(arr[1, 1:4])
+
+print("From both elements, return index 2:")
+print(arr[0:2, 2])
+
+print("From both elements, slice index 1 to index 4 (not included), this will return a 2-D array:")
+print(arr[0:2, 1:4])
+```
+#### Slicing 2-D Arrays:
+Output:
+
+<img width="856" height="166" alt="image" src="https://github.com/user-attachments/assets/db025e9e-95d3-4718-93f5-0eea12ed4399" />
 
 
 

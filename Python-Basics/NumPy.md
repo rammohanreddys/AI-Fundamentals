@@ -211,6 +211,50 @@ Output:
 
 In this array the innermost dimension (5th dim) has 4 elements, the 4th dim has 1 element that is the vector, the 3rd dim has 1 element that is the matrix with the vector, the 2nd dim has 1 element that is 3D array and 1st dim has 1 element that is a 4D array.
 
+### NumPy Array Indexing:
+
+#### Access Array Elements:
+* Array indexing is the same as accessing an array element.
+* You can access an array element by referring to its index number.
+* The indexes in NumPy arrays start with 0, meaning that the first element has index 0, and the second has index 1 etc.
+
+Example:
+```
+import numpy as np
+
+arry = np.array([1,2,3,4,5])
+
+print(arry)
+
+print(arry[0])
+print(arry[4])
+print(arry[0] + arry[4])
+print(arry[3] - arry[0])
+```
+
+Output:
+
+<img width="519" height="117" alt="image" src="https://github.com/user-attachments/assets/7774a897-c818-42ea-a8ed-335e4474b215" />
+
+#### Access 2-D Arrays:
+
+* To access elements from 2-D arrays we can use comma separated integers representing the dimension and the index of the element.
+* Think of 2-D arrays like a table with rows and columns, where the dimension represents the row and the index represents the column.
+
+Example: arry[row, col]
+```
+import numpy as np
+
+arr = np.array([[1,2,3,4,5],   
+                [6,7,8,9,10]])
+
+print('2nd element on 1st row: ', arr[0, 1])
+```
+
+Output:
+
+<img width="370" height="48" alt="image" src="https://github.com/user-attachments/assets/772f6417-8553-4d16-86ca-e790324affa4" />
+
 
 
 

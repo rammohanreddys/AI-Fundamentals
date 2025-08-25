@@ -279,6 +279,87 @@ Output:
 
 <img width="424" height="48" alt="image" src="https://github.com/user-attachments/assets/c6ba0ef4-b65f-4046-9ba8-c47cea70c714" />
 
+### Negative Indexing:
+
+Use negative indexing to access an array from the end.
+
+Example:
+
+Print the last element from the 2nd dim:
+```
+import numpy as np
+
+arr = np.array([[1,2,3,4,5], [6,7,8,9,10]])
+
+print('Last element from 2nd dim: ', arr[1, -1])
+```
+
+Output:
+
+<img width="418" height="42" alt="image" src="https://github.com/user-attachments/assets/58ffb38a-ed40-445a-9e56-095095d4f0e4" />
+
+### NumPy Array Slicing:
+
+#### Slicing arrays:
+
+* Slicing in python means taking elements from one given index to another given index.
+* We pass slice instead of index like this: [start:end].
+* We can also define the step, like this: [start:end:step].
+* If we don't pass start its considered 0
+* If we don't pass end its considered length of array in that dimension
+* If we don't pass step its considered 1
+
+Example:
+```
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5, 6, 7])
+
+print(arr[1:5])
+print(arr[4:])
+print(arr[:4])
+```
+
+Output:
+
+<img width="450" height="88" alt="image" src="https://github.com/user-attachments/assets/3ad6b1bd-67ca-48f3-99bb-6c39d7c56d5b" />
+
+#### Negative Slicing:
+
+Use the minus operator to refer to an index from the end:
+
+Example:
+```
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5, 6, 7])
+
+print(arr[-3:-1])
+```
+
+Output:
+
+<img width="421" height="46" alt="image" src="https://github.com/user-attachments/assets/1c4cf664-f147-44bf-8e8d-7527623fff0e" />
+
+#### STEP:
+
+Use the step value to determine the step of the slicing:
+
+Example:
+```
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5, 6, 7])
+
+print(arr[1:5:2])
+
+print(arr[::2])
+```
+
+Output:
+
+<img width="459" height="58" alt="image" src="https://github.com/user-attachments/assets/090a8417-9b57-45bc-97dc-1c74cef27002" />
+
 
 
 

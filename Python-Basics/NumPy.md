@@ -245,15 +245,39 @@ Example: arry[row, col]
 ```
 import numpy as np
 
-arr = np.array([[1,2,3,4,5],   
-                [6,7,8,9,10]])
+arr = np.array([[1,2,3,4,5], [6,7,8,9,10]])
 
 print('2nd element on 1st row: ', arr[0, 1])
+
+arr2 = np.array([[1,2,3,4,5], [6,7,8,9,10]])
+
+print('5th element on 2nd row: ', arr[1, 4])
 ```
 
 Output:
 
-<img width="370" height="48" alt="image" src="https://github.com/user-attachments/assets/772f6417-8553-4d16-86ca-e790324affa4" />
+<img width="508" height="65" alt="image" src="https://github.com/user-attachments/assets/fb1d69e7-2858-47c4-a574-f5028851fb6f" />
+
+#### Access 3-D Arrays:
+
+To access elements from 3-D arrays we can use comma separated integers representing the dimensions and the index of the element.
+
+Example;
+
+Access the third element of the second array of the first array:
+arry[row, col, index]
+```
+import numpy as np
+
+arr = np.array([[[1, 2, 3], [4, 5, 6]], 
+                [[7, 8, 9], [10, 11, 12]]])
+
+print(arr[0, 1, 2])
+```
+
+Output:
+
+<img width="424" height="48" alt="image" src="https://github.com/user-attachments/assets/c6ba0ef4-b65f-4046-9ba8-c47cea70c714" />
 
 
 

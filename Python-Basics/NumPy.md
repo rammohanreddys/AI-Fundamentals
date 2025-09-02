@@ -498,11 +498,97 @@ Output:
 <img width="554" height="145" alt="image" src="https://github.com/user-attachments/assets/daeeb574-4d59-4f46-92ed-26fa02ba029a" />
 
 
+### **copy() vs view() in NumPy**
 
+In NumPy, copy and view refer to how arrays are duplicated or referenced. Understanding the difference is essential to avoid unexpected behavior when modifying arrays.
 
+| Feature                      | `copy()`                           | `view()` (or slicing)                               |
+| ---------------------------- | ---------------------------------- | --------------------------------------------------- |
+| **Data duplication**         | Creates a new, independent array   | Shares the same data as the original                |
+| **Memory**                   | Takes additional memory            | No extra memory for data                            |
+| **Changes affect original?** | ❌ No                               | ✅ Yes (changes in the view reflect in the original) |
+| **Use case**                 | When you want an independent array | When you want a window into the same data           |
+| **Function used**            | `np.copy()` or `.copy()`           | `.view()` or slicing (e.g., `a[1:3]`)               |
 
+**COPY():**
 
+**Example-1:**
 
+```
+import numpy as np
+
+a = np.array([1,2,3,4,5])
+b = a.copy()
+print("Testing the changes to 'b (copy)' will effect 'a' or not")
+print("                                      ")
+b[0] = 0
+print("a = ", a)
+print("b = ", b)
+```
+**Output:**
+
+<img width="442" height="82" alt="image" src="https://github.com/user-attachments/assets/64642204-615a-4c5d-a3e9-3e6f925d7bf7" />
+
+b is a copy, so changing b doesn't affect a and vice versa
+
+**Example-2:**
+
+```
+import numpy as np
+
+a = np.array([1,2,3,4,5])
+b = a.copy()
+print("Testing the changes to 'a (original)' will effect 'b' or not")
+print("                                      ")
+a[0] = 0
+print("a = ", a)
+print("b = ", b)
+```
+**Output:**
+
+<img width="467" height="76" alt="image" src="https://github.com/user-attachments/assets/023a3e6a-b43c-428b-9292-4ca9b7c8baa1" />
+
+b is a copy, so changing **a** doesn't affect **b** and vice versa
+
+**View():**
+
+**Example-1:**
+
+```
+import numpy as np
+
+a = np.array([1,2,3,4,5])
+b = a.view()
+print("Testing the changes to 'b (view)' will effect 'a' or not")
+print("                                      ")
+b[0] = 0
+print("a = ", a)
+print("b = ", b)
+```
+**Output:**
+
+<img width="448" height="73" alt="image" src="https://github.com/user-attachments/assets/faa14027-d93a-45be-9787-baf0e099aeb3" />
+
+b is a view, so changing b(view) will effect affect a and vice versa
+
+**Example-2:**
+
+```
+import numpy as np
+
+a = np.array([1,2,3,4,5])
+b = a.view()
+print("Testing the changes to 'a (original)' will effect 'b' or not")
+print("                                      ")
+a[0] = 0
+print("a = ", a)
+print("b = ", b)
+```
+**Output:**
+
+<img width="481" height="72" alt="image" src="https://github.com/user-attachments/assets/5062b4a8-8f15-4b27-aa73-9239ddc33fef" />
+
+b is a view, so changing **a** will affect **b** and vice versa
 
 
 

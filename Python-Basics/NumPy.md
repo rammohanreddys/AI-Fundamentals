@@ -8,6 +8,13 @@ Context:
 * NumPy Array Indexing
 * NumPy Array Slicing
 * NumPy Data Types
+* NumPy COPY vs View
+* NuMPy Array Shape vs Reshape
+* NumPy Array Iteration
+* NumPy Array Join
+* NumPy Array Split
+* Numpy Array Search
+* Numpy Array Sort & Filter
 
 ## **What is NumPy?**
 
@@ -590,6 +597,348 @@ print("b = ", b)
 
 b is a view, so changing **a** will affect **b** and vice versa
 
+### **NumPy Array Shape:**
+
+```
+Shape of An Array - The shape of an array is the number of elements in each dimension.
+```
+
+**Get the Shape of an Array**
+
+NumPy arrays have an attribute called shape that returns a tuple with each index having the number of corresponding elements.
+
+**Example-1:**
+
+```
+import numpy as np
+
+arr = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
+
+print(arr.shape)
+```
+
+**Output:**
+
+<img width="691" height="48" alt="image" src="https://github.com/user-attachments/assets/10c41a3d-4f03-4287-8995-95185c99192e" />
+
+**Example-2:**
+
+```
+import numpy as np
+
+arr = np.array([1, 2, 3, 4], ndmin=5)
+
+print(arr)
+print('shape of array :', arr.shape)
+```
+
+**Output:**
+
+<img width="681" height="68" alt="image" src="https://github.com/user-attachments/assets/4524c509-7b42-482d-8baf-cb7840866cb3" />
+
+**Example-3:**
+
+```
+import numpy as np
+
+##1D Array (Vector)
+a = np.array([1, 2, 3, 4])
+print(a.shape)  
+
+#2D Array (Matrix)
+b = np.array([[1, 2, 3],
+              [4, 5, 6]])
+print(b.shape)  
+
+#3D Array (Tensor)
+c = np.array([[[1, 2], [3, 4]],
+              [[5, 6], [7, 8]]])
+print(c.shape)
+```
+
+**Output:**
+
+<img width="695" height="80" alt="image" src="https://github.com/user-attachments/assets/41e27e72-5920-489f-89a3-ca41a05c912e" />
+
+**Note:**  2 blocks, each with 2 rows and 2 columns → shape is (2, 2, 2)
+
+**Quick-Notes:** 
+
+* array.ndim → Number of dimensions
+* array.size → Total number of elements
+* array.shape[i] → Size of dimension i
+
+### NumPy Array Reshaping:
+
+* Reshaping means changing the shape of an array.
+* The shape of an array is the number of elements in each dimension.
+* By reshaping we can add or remove dimensions or change number of elements in each dimension.
+
+**Reshape From 1-D to 2-D:**
+
+```
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+
+newarr = arr.reshape(4, 3)
+
+print(newarr)
+```
+
+**Output:**
+
+<img width="743" height="112" alt="image" src="https://github.com/user-attachments/assets/7cf89a62-f4fe-4d00-baa3-10866667f40d" />
+
+**Reshape From 1-D to 3-D:**
+
+```
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+
+newarr = arr.reshape(2, 3, 2)
+
+print(newarr)
+```
+**Output:**
+
+<img width="614" height="169" alt="image" src="https://github.com/user-attachments/assets/2c5247de-d3b7-497a-94ce-615ffe905c55" />
+
+**Unknown Dimension**
+
+* You are allowed to have one "unknown" dimension.
+* Meaning that you do not have to specify an exact number for one of the dimensions in the reshape method.
+* Pass -1 as the value, and NumPy will calculate this number for you.
+
+**Example:**
+
+```
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+
+newarr = arr.reshape(2, 2, -1)
+
+print(newarr)
+```
+
+**Output:**
+
+<img width="805" height="130" alt="image" src="https://github.com/user-attachments/assets/6f36617c-d605-44aa-bedf-76b4bfecb39c" />
+
+**Flattening the arrays**
+
+* Flattening array means converting a multidimensional array into a 1D array.
+* We can use reshape(-1) to do this.
+
+**Example:**
+```
+import numpy as np
+
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+
+newarr = arr.reshape(-1)
+
+print(newarr)
+```
+
+**Output:**
+
+<img width="515" height="52" alt="image" src="https://github.com/user-attachments/assets/33179379-7f74-45c1-b797-ea7131f28662" />
+
+**Summary:**
+
+| Operation                    | Function                   |
+| ---------------------------- | -------------------------- |
+| Reshape array                | `reshape()`                |
+| Flatten array                | `reshape(-1)` or `ravel()` |
+| Let NumPy decide a dimension | Use `-1`                   |
+
+
+### NumPy Array Iterating:
+
+**Iterating Arrays**
+
+* Iterating means going through elements one by one.
+* As we deal with multi-dimensional arrays in numpy, we can do this using basic for loop of python.
+* If we iterate on a 1-D array it will go through each element one by one.
+
+**Example**:
+
+Iterate on the elements of the following 1-D array:
+```
+import numpy as np
+
+arr = np.array([1, 2, 3])
+
+for x in arr:
+  print(x)
+```
+**Output:**
+
+<img width="581" height="85" alt="image" src="https://github.com/user-attachments/assets/960c8ec9-6638-4776-b6e3-6998fa858a38" />
+
+**Iterating 2-D Arrays**:
+
+In a 2-D array it will go through all the rows.
+```
+import numpy as np
+
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+
+for x in arr:
+  print(x)
+```
+
+**Output:**
+
+<img width="642" height="64" alt="image" src="https://github.com/user-attachments/assets/2cd22159-c1ea-45c3-8eeb-5e5d54a20700" />
+
+**Note:** To return the actual values, the scalars, we have to iterate the arrays in each dimension.
+
+Iterate on each scalar element of the 2-D array:
+```
+import numpy as np
+
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+
+for x in arr:
+  for y in x:
+    print(y)
+```
+
+**Output:**
+
+<img width="677" height="138" alt="image" src="https://github.com/user-attachments/assets/69d9174f-d46f-4f80-be02-bf89bac2430f" />
+
+
+**Iterating 3-D Arrays**
+
+In a 3-D array it will go through all the 2-D arrays.
+```
+import numpy as np
+
+arr = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])
+
+for x in arr:
+  print(x)
+```
+
+**Output:**
+
+<img width="673" height="100" alt="image" src="https://github.com/user-attachments/assets/d320c786-d325-4ca2-908b-20b768534832" />
+
+To return the actual values, the scalars, we have to iterate the arrays in each dimension.
+```
+import numpy as np
+
+arr = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])
+
+for x in arr:
+  for y in x:
+    for z in y:
+      print(z)
+```
+
+**Output:**
+
+<img width="721" height="252" alt="image" src="https://github.com/user-attachments/assets/bbd90c88-6ab0-4ec7-9f39-ccb636c7e9e5" />
+
+
+**Iterating Arrays Using nditer()**
+
+The function nditer() is a helping function that can be used from very basic to very advanced iterations. It solves some basic issues which we face in iteration, lets go through it with examples.
+
+**Iterating on Each Scalar Element**
+
+In basic for loops, iterating through each scalar of an array we need to use n for loops which can be difficult to write for arrays with very high dimensionality.
+
+Iterate through the following 3-D array:
+```
+import numpy as np
+
+arr = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+
+for x in np.nditer(arr):
+  print(x)
+```
+
+**Output:**
+
+<img width="691" height="169" alt="image" src="https://github.com/user-attachments/assets/0ce2d7bf-2819-428c-941b-4caaece6cece" />
+
+**Iterating Array With Different Data Types**
+
+We can use op_dtypes argument and pass it the expected datatype to change the datatype of elements while iterating.
+
+NumPy does not change the data type of the element in-place (where the element is in array) so it needs some other space to perform this action, that extra space is called buffer, and in order to enable it in nditer() we pass flags=['buffered'].
+
+Iterate through the array as a string:
+```
+import numpy as np
+
+arr = np.array([1, 2, 3])
+
+for x in np.nditer(arr, flags=['buffered'], op_dtypes=['S']):
+  print(x)
+```
+
+**Output:**
+
+<img width="592" height="90" alt="image" src="https://github.com/user-attachments/assets/7162960a-3ec9-40a4-9b3f-64289f247ab8" />
+
+**Iterating With Different Step Size:**
+
+We can use filtering and followed by iteration.
+
+Iterate through every scalar element of the 2D array skipping 1 element:
+```
+import numpy as np
+
+arr = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
+
+for x in np.nditer(arr[:, ::2]):
+  print(x)
+```
+**Output:**
+
+<img width="589" height="102" alt="image" src="https://github.com/user-attachments/assets/86ff93df-6eec-46cc-a3aa-231b68700725" />
+
+
+**Enumerated Iteration Using ndenumerate():**
+
+* Enumeration means mentioning sequence number of somethings one by one.
+* Sometimes we require corresponding index of the element while iterating, the ndenumerate() method can be used for those usecases.
+
+Enumerate on following 1D arrays elements:
+```
+import numpy as np
+
+arr = np.array([1, 2, 3])
+
+for idx, x in np.ndenumerate(arr):
+  print(idx, x)
+```
+
+**Output:**
+
+<img width="531" height="88" alt="image" src="https://github.com/user-attachments/assets/9b1e634a-dffa-44a3-97dc-abac7e0b2015" />
+
+
+Enumerate on following 2D array's elements:
+```
+import numpy as np
+
+arr = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
+
+for idx, x in np.ndenumerate(arr):
+  print(idx, x)
+```
+
+**Output:**
+
+<img width="699" height="173" alt="image" src="https://github.com/user-attachments/assets/b1ebe7c8-7e7c-4fbc-825c-d44dd7f56bc5" />
 
 
 

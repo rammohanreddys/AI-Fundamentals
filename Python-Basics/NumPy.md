@@ -1388,4 +1388,92 @@ print(x)
 
 <img width="844" height="430" alt="image" src="https://github.com/user-attachments/assets/26ba3471-c05f-4da0-8a0a-d66142723797" />
 
+### Random Data Distribution:
+
+**What is Data Distribution?**
+
+* Data Distribution is a list of all possible values, and how often each value occurs.
+* Such lists are important when working with statistics and data science.
+* The random module offer methods that returns randomly generated data distributions.
+
+**Random Distribution**
+
+* A random distribution is a set of random numbers that follow a certain probability density function.
+* We can generate random numbers based on defined probabilities using the choice() method of the random module.
+* The choice() method allows us to specify the probability for each value.
+* The probability is set by a number between 0 and 1, where 0 means that the value will never occur and 1 means that the value will always occur.
+
+**Example:**
+
+#Generate a 1-D array containing 100 values, where each value has to be 3, 5, 7 or 9.
+#The probability for the value to be 3 is set to be 0.1
+#The probability for the value to be 5 is set to be 0.3
+#The probability for the value to be 7 is set to be 0.6
+#The probability for the value to be 9 is set to be 0
+```
+from numpy import random
+
+x = random.choice([3, 5, 7, 9], p=[0.1, 0.3, 0.6, 0.0], size=(100))
+print(x)
+print(" ")
+x = random.choice([3, 5, 7, 9], p=[0.1, 0.3, 0.6, 0.0], size=(3, 5))
+print(x)
+```
+
+**Output:**
+
+<img width="618" height="126" alt="image" src="https://github.com/user-attachments/assets/dc2bff00-b873-4555-8aad-00bee4daeba5" />
+
+### Random Permutations:
+
+**Random Permutations of Elements**
+
+* A permutation refers to an arrangement of elements. e.g. [3, 2, 1] is a permutation of [1, 2, 3] and vice-versa.
+* The NumPy Random module provides two methods for this: shuffle() and permutation().
+
+**Shuffling Arrays**:
+
+Shuffle means changing arrangement of elements in-place. i.e. in the array itself.
+
+```
+from numpy import random
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5])
+
+random.shuffle(arr)
+
+print(arr)
+```
+
+**Output:**
+
+<img width="505" height="55" alt="image" src="https://github.com/user-attachments/assets/c2f139d1-294b-4b47-a56d-83f87dbbf06a" />
+
+**Note:** The shuffle() method makes changes to the original array.
+
+**Generating Permutation of Arrays:**
+
+```
+from numpy import random
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5])
+
+print(random.permutation(arr))
+print(arr)
+```
+
+**Output:**
+
+<img width="528" height="70" alt="image" src="https://github.com/user-attachments/assets/8da9b5c6-2e21-4dd6-9582-e7c84c95da7b" />
+
+**Note:** The permutation() method returns a re-arranged array (and leaves the original array un-changed).
+
+
+
+
+
+
+
 

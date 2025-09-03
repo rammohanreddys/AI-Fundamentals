@@ -944,21 +944,130 @@ for idx, x in np.ndenumerate(arr):
 <img width="699" height="173" alt="image" src="https://github.com/user-attachments/assets/b1ebe7c8-7e7c-4fbc-825c-d44dd7f56bc5" />
 
 
+### NumPy Joining Array:
+
+**Joining NumPy Arrays**
+
+* Joining means putting contents of two or more arrays in a single array.
+* In SQL we join tables based on a key, whereas in NumPy we join arrays by axes.
+* We pass a sequence of arrays that we want to join to the concatenate() function, along with the axis. If axis is not explicitly passed, it is taken as 0.
+
+Joining two arrays:
+```
+import numpy as np
+
+arr1 = np.array([1, 2, 3])
+
+arr2 = np.array([4, 5, 6])
+
+arr = np.concatenate((arr1, arr2))
+
+print(arr)
+```
+
+**Output:**
+
+<img width="607" height="54" alt="image" src="https://github.com/user-attachments/assets/4ad06eb1-2700-42b7-9d37-c6d78bd75876" />
+
+Join two 2-D arrays along rows (axis=1):
+```
+import numpy as np
+
+arr1 = np.array([[1, 2], [3, 4]])
+
+arr2 = np.array([[5, 6], [7, 8]])
+
+arr = np.concatenate((arr1, arr2), axis=1)
+
+print(arr)
+```
+
+**Output:**
+
+<img width="568" height="67" alt="image" src="https://github.com/user-attachments/assets/1194fb54-16c2-4953-bc8d-a6983b0dd8c9" />
+
+**Joining Arrays Using Stack Functions:**
+
+* Stacking is same as concatenation, the only difference is that stacking is done along a new axis.
+* We can concatenate two 1-D arrays along the second axis which would result in putting them one over the other, ie. stacking.
+* We pass a sequence of arrays that we want to join to the stack() method along with the axis. If axis is not explicitly passed it is taken as 0.
+
+```
+import numpy as np
+
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+
+arr = np.stack((arr1, arr2), axis=0)
+print(arr)
+print("               ")
+
+arr = np.stack((arr1, arr2), axis=1)
+print(arr)
+```
+
+**Output:**
+
+<img width="583" height="134" alt="image" src="https://github.com/user-attachments/assets/34e35d60-78aa-4758-8f29-bccb3e12850f" />
 
 
+**Stacking Along Rows**:
+
+NumPy provides a helper function: hstack() to stack along rows.
+```
+import numpy as np
+
+arr1 = np.array([1, 2, 3])
+
+arr2 = np.array([4, 5, 6])
+
+arr = np.hstack((arr1, arr2))
+
+print(arr)
+```
+
+**Output:**
+
+<img width="551" height="46" alt="image" src="https://github.com/user-attachments/assets/103e0667-8ac7-4e24-aa2c-01bba8241662" />
+
+**Stacking Along Columns**:
+
+NumPy provides a helper function: vstack()  to stack along columns.
+```
+import numpy as np
+
+arr1 = np.array([1, 2, 3])
+
+arr2 = np.array([4, 5, 6])
+
+arr = np.vstack((arr1, arr2))
+
+print(arr)
+```
+
+**Output:**
+
+<img width="559" height="69" alt="image" src="https://github.com/user-attachments/assets/cc462b40-418d-45dd-be8f-0ce1ae67f4ba" />
 
 
+**Stacking Along Height (depth)**
 
+NumPy provides a helper function: dstack() to stack along height, which is the same as depth.
+```
+import numpy as np
 
+arr1 = np.array([1, 2, 3])
 
+arr2 = np.array([4, 5, 6])
 
+arr = np.dstack((arr1, arr2))
 
+print(arr)
+```
 
+**Output:**
 
-
-
-
-
+<img width="542" height="90" alt="image" src="https://github.com/user-attachments/assets/4c4fd48a-db88-4c64-8222-29e32717c7b1" />
 
 
 

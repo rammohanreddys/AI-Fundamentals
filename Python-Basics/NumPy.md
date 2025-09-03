@@ -5,16 +5,19 @@ Context:
 * What is NumPy?
 * Why Use NumPy?
 * Creating Arrays Using NumPy
-* NumPy Array Indexing
-* NumPy Array Slicing
-* NumPy Data Types
-* NumPy COPY vs View
-* NuMPy Array Shape vs Reshape
-* NumPy Array Iteration
-* NumPy Array Join
-* NumPy Array Split
-* Numpy Array Search
-* Numpy Array Sort & Filter
+* NumPy Array:
+   * Indexing
+   * Slicing
+   * NumPy Data Types
+   * NumPy COPY vs View
+   * Shape vs Reshape
+   * Iteration
+   * Join
+   * Split
+   * Search
+   * Sort & Filter
+
+* NumPy Random:
 
 ## **What is NumPy?**
 

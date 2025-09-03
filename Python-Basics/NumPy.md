@@ -18,6 +18,22 @@ Context:
    * Sort & Filter
 
 * NumPy Random:
+   * Random Intro
+   * Data Distribution
+   * Random Permutations
+   * Seaborn Module
+   * Normal Distribution
+   * Binomial Distribution
+   * Poisson Distribution
+   * Uniform Distribution
+   * Logistic Distribution
+   * Multinomial Distribution
+   * Exponential Distribution
+   * Chi Square Distribution
+   * Rayleigh Distribution
+   * Pareto Distribution
+   * Zipf Distribution
+  
 
 ## **What is NumPy?**
 
@@ -1311,5 +1327,65 @@ print(newarr)
 <img width="511" height="60" alt="image" src="https://github.com/user-attachments/assets/e6f881bf-9ecd-40d0-9620-0a37cf88a113" />
 
 
+## NumPy Random:
+
+**What is a Random Number?**
+
+Random number does NOT mean a different number every time. Random means something that can not be predicted logically.
+
+**Pseudo Random and True Random.**
+
+* Computers work on programs, and programs are definitive set of instructions. So it means there must be some algorithm to generate a random number as well.
+* If there is a program to generate random number it can be predicted, thus it is not truly random.
+
+Random numbers generated through a generation algorithm are called pseudo random.
+
+**Can we make truly random numbers?**
+
+Yes. In order to generate a truly random number on our computers we need to get the random data from some outside source. This outside source is generally our keystrokes, mouse movements, data on network etc.
+
+We do not need truly random numbers, unless it is related to security (e.g. encryption keys) or the basis of application is the randomness (e.g. Digital roulette wheels).
+
+In this tutorial we will be using pseudo random numbers.
+
+```
+from numpy import random
+
+#Generate a random integer from 0 to 100:
+x = random.randint(100)
+print(x)
+print(" ")
+#Generate a random float from 0 to 1:
+x = random.rand(2)
+print(x)
+print(" ")
+x = random.rand(5)
+print(x)
+print(" ")
+#Generate a 1-D array containing 5 random integers from 0 to 100:
+x=random.randint(100, size=(5))
+print(x)
+print(" ")
+#Generate a 2-D array with 3 rows, each row containing 5 random integers from 0 to 100:
+x = random.randint(100, size=(3, 5))
+print(x)
+print(" ")
+#Generate a 2-D array with 3 rows, each row containing 5 random float numbers:
+x = random.rand(3, 5)
+print(x)
+print(" ")
+#The choice() method allows you to generate a random value based on an array of values.
+#The choice() method takes an array as a parameter and randomly returns one of the values.
+x = random.choice([3, 5, 7, 9])
+print(x)
+print(" ")
+#Generate a 2-D array that consists of the values in the array parameter (3, 5, 7, and 9):
+x = random.choice([3, 5, 7, 9], size=(3, 5))
+print(x)
+```
+
+**Output:**
+
+<img width="844" height="430" alt="image" src="https://github.com/user-attachments/assets/26ba3471-c05f-4da0-8a0a-d66142723797" />
 
 

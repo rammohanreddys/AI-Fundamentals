@@ -1069,29 +1069,246 @@ print(arr)
 
 <img width="542" height="90" alt="image" src="https://github.com/user-attachments/assets/4c4fd48a-db88-4c64-8222-29e32717c7b1" />
 
+### NumPy Splitting Array:
+
+**Splitting NumPy Arrays**
+
+* Splitting is reverse operation of Joining.
+* Joining merges multiple arrays into one and Splitting breaks one array into multiple.
+* We use array_split() for splitting arrays, we pass it the array we want to split and the number of splits.
+
+**Example:**
+
+```
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5, 6])
+
+newarr = np.array_split(arr, 3)
+print(newarr)
+
+print(" ")
+##If the array has less elements than required, it will adjust from the end accordingly.
+newarr = np.array_split(arr, 4)
+print(newarr)
+```
+
+**Output:**
+
+<img width="680" height="96" alt="image" src="https://github.com/user-attachments/assets/b0d7d5a9-6e8e-48c8-8693-fac5561200a4" />
+
+### NumPy Searching Arrays:
+
+**Searching Arrays**
+
+* You can search an array for a certain value, and return the indexes that get a match.
+* To search an array, use the where() method.
+
+**Example:1**
+
+Find the indexes where the value is 4:
+```
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5, 4, 4])
+
+x = np.where(arr == 4)
+
+print(x)
+```
+
+**Output:**
+
+<img width="559" height="50" alt="image" src="https://github.com/user-attachments/assets/4f47518c-c252-4f9e-9b0d-c2e6734a8ddb" />
 
 
+The example above will return a tuple: (array([3, 5, 6],)
+
+Which means that the value 4 is present at index 3, 5, and 6.
 
 
+**Example:2**
+
+Find the indexes where the values are even:
+```
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+
+x = np.where(arr%2 == 0)
+
+print(x)
+```
+
+**Output:**
+
+<img width="500" height="49" alt="image" src="https://github.com/user-attachments/assets/e35e73b3-fff9-48fa-a0e9-9ac11c8dc794" />
 
 
+**Example:3**
+
+Find the indexes where the values are odd:
+```
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+
+x = np.where(arr%2 == 1)
+
+print(x)
+```
+
+**Output:**
+
+<img width="538" height="56" alt="image" src="https://github.com/user-attachments/assets/df69dee6-62c7-4411-b042-c78d8568029f" />
+
+### NumPy Sorting Arrays:
+
+* Sorting means putting elements in an ordered sequence.
+* Ordered sequence is any sequence that has an order corresponding to elements, like numeric or alphabetical, ascending or descending.
+* The NumPy ndarray object has a function called sort(), that will sort a specified array.
+
+```
+import numpy as np
+
+arr = np.array([3, 2, 0, 1])
+print(np.sort(arr))
+
+arr = np.array(['banana', 'cherry', 'apple'])
+print(np.sort(arr))
+
+arr = np.array([True, False, True])
+print(np.sort(arr))
+
+arr = np.array([[3, 2, 4], [5, 0, 1]])
+print(np.sort(arr))
+```
+
+**Output:**
+
+<img width="665" height="121" alt="image" src="https://github.com/user-attachments/assets/917da256-20d1-41ca-91f5-8f805ac038ff" />
+
+### NumPy Filter Array:
+
+**Filtering Arrays**
+
+* Getting some elements out of an existing array and creating a new array out of them is called filtering.
+* In NumPy, you filter an array using a boolean index list.
+
+If the value at an index is True that element is contained in the filtered array, if the value at that index is False that element is excluded from the filtered array.
+```
+import numpy as np
+
+arr = np.array([41, 42, 43, 44])
+
+x = [True, False, True, False]
+
+newarr = arr[x]
+
+print(newarr)
+```
+
+**Output:**
+
+<img width="513" height="57" alt="image" src="https://github.com/user-attachments/assets/ff133061-8694-401b-8246-b104782be91a" />
+
+**Creating the Filter Array**
+
+In the example above we hard-coded the True and False values, but the common use is to create a filter array based on conditions.
+
+```
+import numpy as np
+
+arr = np.array([41, 42, 43, 44])
+
+# Create an empty list
+filter_arr = []
+
+# go through each element in arr
+for element in arr:
+  # if the element is higher than 42, set the value to True, otherwise False:
+  if element > 42:
+    filter_arr.append(True)
+  else:
+    filter_arr.append(False)
+
+newarr = arr[filter_arr]
+
+print(filter_arr)
+print(newarr)
+```
+
+**Output:**
+
+<img width="591" height="66" alt="image" src="https://github.com/user-attachments/assets/58421a45-55a8-4b16-8898-e6db34907034" />
+
+Create a filter array that will return only even elements from the original array:
+```
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5, 6, 7])
+
+# Create an empty list
+filter_arr = []
+
+# go through each element in arr
+for element in arr:
+  # if the element is completely divisble by 2, set the value to True, otherwise False
+  if element % 2 == 0:
+    filter_arr.append(True)
+  else:
+    filter_arr.append(False)
+
+newarr = arr[filter_arr]
+
+print(filter_arr)
+print(newarr)
+```
+
+**Output:**
+
+<img width="511" height="60" alt="image" src="https://github.com/user-attachments/assets/e6f881bf-9ecd-40d0-9620-0a37cf88a113" />
+
+**Creating Filter Directly From Array**
+
+* The above example is quite a common task in NumPy and NumPy provides a nice way to tackle it.
+* We can directly substitute the array instead of the iterable variable in our condition and it will work just as we expect it to.
+
+```
+import numpy as np
+
+arr = np.array([41, 42, 43, 44])
+
+filter_arr = arr > 42
+
+newarr = arr[filter_arr]
+
+print(filter_arr)
+print(newarr)
+```
+
+**Output:**
+
+<img width="569" height="65" alt="image" src="https://github.com/user-attachments/assets/382f3976-0f03-4843-b23f-2d21a357590e" />
 
 
+```
+import numpy as np
 
+arr = np.array([1, 2, 3, 4, 5, 6, 7])
 
+# Create an empty list
+filter_arr = arr%2 ==0
 
+newarr = arr[filter_arr]
 
+print(filter_arr)
+print(newarr)
+```
 
+**Output:**
 
-
-
-
-
-
-
-
-
-
+<img width="511" height="60" alt="image" src="https://github.com/user-attachments/assets/e6f881bf-9ecd-40d0-9620-0a37cf88a113" />
 
 
 

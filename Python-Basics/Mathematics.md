@@ -99,3 +99,8 @@ Examples
 * Probability is foundational in fields such as statistics, science, finance, artificial intelligence, and everyday decision-making.
 
 In brief, probability is the mathematical measure of how likely an event is to occur, helping predict outcomes in uncertain situations.
+
+
+<p align="center">
+  <img src="images/pd1.JPG" alt="Description of my awesome image" width="600">
+</p>

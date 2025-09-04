@@ -1,5 +1,3 @@
-# Mathematics
-
 # Probability Basics:
 
 ## **Random Experiment:**

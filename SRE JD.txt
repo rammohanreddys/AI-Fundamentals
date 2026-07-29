@@ -1,0 +1,33 @@
+SRE JD
+Reliability & Operations
+- Design, implement, and maintain highly available and resilient systems in Kubernetes-based environments
+- Define and enforce SLOs, SLIs, and error budgets
+- Lead incident response, RCA, and postmortems
+- Drive reliability improvements through automation
+
+Observability (Core Focus)
+- Architect and operate observability platforms for metrics, logging, tracing, and alerting
+- Work with Prometheus, Alertmanager, OpenTelemetry, Grafana, Loki / ELK / OpenSearch
+- Implement cloud-native monitoring (GCP Cloud Monitoring & Logging preferred)
+- Establish actionable alerting standards
+
+Cloud & Platform Engineering
+- Build and manage infrastructure on GCP (preferred) or AWS
+- Operate Kubernetes clusters (GKE preferred)
+- Deploy services using Helm
+- Manage containerized workloads using Docker
+
+Automation & Tooling
+
+- Strong Python skills with emphasis on reliability, automation, and observability tooling
+- Develop automation and tooling using Python
+- Create internal reliability and monitoring tools
+- Integrate CI/CD pipelines with observability and reliability checks
+
+Collaboration & Leadership
+- Mentor junior engineers
+- Influence architecture decisions
+- Collaborate across engineering teams
+
+Project Details
+Project Details / What You’ll Work On Build and operate a centralized observability platform for metrics, logs, traces, and alerting across Kubernetes workloads using Prometheus, Grafana, OpenTelemetry, and GCP Cloud Monitoring Define and drive SLOs, SLIs, and error budgets to improve reliability, reduce MTTR, and guide release decisions Design, operate, and optimize EKS/GKE-based Kubernetes platforms using Helm and containerized workloads with Docker Develop Python-based automation and tooling for observability, SLO reporting, incident response, and operational workflows Lead incident response for production issues, conduct blameless postmortems, and drive long-term reliability improvements Optimize platform scalability, performance, and cloud cost efficiency with a strong focus on GCP and AWS. Act as a technical leader, influencing architecture and mentoring teams on reliability and observability best practices

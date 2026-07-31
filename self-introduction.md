@@ -1,4 +1,4 @@
-“Hi, good morning/afternoon. My name is Ramamohan, and I bring over 11 years of hands-on experience in cloud-native infrastructure, DevOps leadership, and Site Reliability Engineering across multi-cloud environments.
+“Hi, Good morning/afternoon. My name is Ramamohan, and I bring over 11+ years of hands-on experience in cloud-native infrastructure, DevOps leadership, and Site Reliability Engineering across multi-cloud environments.
 
 Currently, I serve as a Lead DevOps Engineer at UST Global. In my role, I focus heavily on architecting resilient Kubernetes platforms, driving observability strategies, and developing Python-based automation to improve system reliability and reduce MTTR.
 

@@ -1,0 +1,37 @@
+
+
+Questions:
+
+- Service, types, loadbalancer, why ingress than Load balancer service, ingress components, install nginx ingress controller
+- storage plugins - csi, network plugin - cni
+- 
+
+
+Areas:
+
+pod, deployment, service, replicaset, daemonset, statefulset, secret, configmap, pv, pvc, liveness, readynesss probes, pod affinity, node selectors, security-context, 
+pod-disurption-budgets, rbac, role, rolebinding, clusterrole, clusterrolebinding,, pod-security-policy, init-containers, sidecar containers,
+HPA, VPA, ClusterAutoscaler, ingress, clusterIP, nodeport, DestinationRule, deployment-strategies, Ingress-vs-Istio, pod-life-cycle, network-policies, storage-classes, 
+authorizationpolicy vs network-policies
+pod lifecycle
+pod errors
+pod vs deployment
+replicaset vs replication controller
+deployment vs statefulset 
+lb-service vs ingress vs istio-servicemesh
+user-request-flow
+authentication vs authorisation in k8s
+pod-security-policy vs pod-security-admission
+deployment-strategies (rolling-updating, canary deployments)
+crd's
+All template basic formats
+kubectl commands & helm commands
+helm structure
+how secret integration GSM with k8s in GCP 
+certificates rotation  - check with chanukya & Jayanth
+ArgoCD Integration + deployment pipelines
+pod affinity vs node affinity vs node selector
+liveness vs readyness probes
+cluster upgrades/failures/rollback
+
+
